@@ -1,20 +1,15 @@
 from setuptools import setup
 
-with open("README.md", "r", encoding="utf-8") as fh:
-    long_description = fh.read()
-
 setup(
-    name="pytest-hylang",
-    version="0.0.1",
-    author="Eugene Rossokha",
-    author_email="arjaz@protonmail.com",
-    description="Pytest plugin to allow running tests written in hylang",
-    long_description=long_description,
-    long_description_content_type="text/markdown",
-    url="https://github.com/arjaz/pytest-hylang",
-    packages=["pytest_hylang"],
+    name="pytest-hy",
+    version="1.0.0.0",
+    author="Jeet Ray",
+    author_email="jeet.ray@syvl.org",
+    description="A combination of the most recent hylang-based conftests!",
+    url="https://github.com/syvlorg/pytest-hy",
+    packages=["pytest_hy"],
     # the following makes a plugin available to pytest
-    entry_points={"pytest11": ["hy.pytest_plugin = pytest_hylang.conftest"]},
+    entry_points={"pytest11": ["hy.pytest_plugin = pytest_hy.conftest"]},
     # custom PyPI classifier for pytest plugins
     classifiers=[
         "Framework :: Pytest",
@@ -22,6 +17,6 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    install_requires=["pytest", "py", "hy"],
-    python_requires=">=3.6",
+    install_requires=["pytest", "hy"],
+    python_requires=">=3.7",
 )

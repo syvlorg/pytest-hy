@@ -1,0 +1,3 @@
+* pytest-hy
+
+The official [[https://github.com/hylang/hy/blob/master/conftest.py][hy conftest]], as a [[https://docs.pytest.org/en/7.1.x/][pytest]] plugin!
