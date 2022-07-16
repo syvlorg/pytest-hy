@@ -1,1 +1,1 @@
-(import ./.).devShell.${builtins.currentSystem}
+with builtins; (import ./.).devShell.${builtins.currentSystem}
