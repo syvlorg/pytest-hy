@@ -29,6 +29,6 @@
                 license = licenses.mit;
             };
         };
-        python = "hy";
+        type = "hy";
     };
 }

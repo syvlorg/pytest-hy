@@ -52,7 +52,7 @@ in {
                 license = licenses.mit;
             };
         };
-        python = "hy";
+        type = "hy";
     };
 }
 #+end_src
