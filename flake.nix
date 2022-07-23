@@ -2,8 +2,6 @@
     description = "The official hy conftest, as a pytest plugin!";
     inputs = rec {
         settings.url = github:sylvorg/settings;
-        # nixpkgs.follows = "settings/nixpkgs";
-        nixpkgs.url = github:nixos/nixpkgs/nixos-22.05;
         flake-utils.url = github:numtide/flake-utils;
         flake-compat = {
             url = "github:edolstra/flake-compat";
