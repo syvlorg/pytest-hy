@@ -9,6 +9,7 @@
         };
     };
     outputs = inputs@{ self, flake-utils, settings, ... }: with builtins; with settings.lib; with flake-utils.lib; settings.mkOutputs {
+        overlays = j.foldToSet (map (python: (j.inputsToOverlays.python.${python} inputs)) j.attrs.versionNames.python);
         pname = "pytest-hy";
         callPackage = { lib, buildPythonPackage, fetchFromGitHub, pythonOlder, pytest, hy, pname }: let
             owner = "syvlorg";
