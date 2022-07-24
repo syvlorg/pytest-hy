@@ -20,10 +20,13 @@ commit: add
 push: commit
 |git -C $(mkfileDir) push
 
+update-settings:
+|nix flake lock --update-input settings
+
 update:
 |nix flake update
 
-tangle:
+tangle: update-settings
 |$(call nixShell,general) "org-tangle $(mkfileDir)/nix.org"
 
 super: tangle update push
