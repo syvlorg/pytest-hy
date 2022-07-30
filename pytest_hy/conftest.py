@@ -25,12 +25,12 @@ def pytest_ignore_collect(path, config):
 def pytest_collect_file(parent, path):
     if (
         path.ext == ".hy"
-        and (
-            path.basename.startswith("test_")
-            or path.basename.startswith("test-")
-            or path.basename.endswith("_test")
-            or path.basename.endswith("-test")
-        )
+        # and (
+        #     path.basename.startswith("test_")
+        #     or path.basename.startswith("test-")
+        #     or path.basename.endswith("_test")
+        #     or path.basename.endswith("-test")
+        # )
 
         # Mimics https://github.com/hylang/hy/blob/master/conftest.py#L38:
         and ((not NATIVE_TESTS.exists()) or (NATIVE_TESTS.exists() and (str(NATIVE_TESTS) in (path.dirname + os.sep))))
