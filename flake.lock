@@ -522,11 +522,11 @@
         "sysget": "sysget"
       },
       "locked": {
-        "lastModified": 1659571879,
-        "narHash": "sha256-9iXc/aTHx6ghGLTIkoCWOri4JfpeSU5YBHnXZW/Fk3o=",
+        "lastModified": 1659579980,
+        "narHash": "sha256-Oy/3yCHZKDFpF0WIrhVZCuPiNi2FMcDVN9bXnIyc0qY=",
         "owner": "sylvorg",
         "repo": "settings",
-        "rev": "da1a702dde6ca33e842f94452bb2dcd530a2e512",
+        "rev": "1c0f932e2fb928fb1df098d8a7c6ee37208e0160",
         "type": "github"
       },
       "original": {
