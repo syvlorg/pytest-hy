@@ -1,7 +1,14 @@
+* envrc
+
+#+begin_src shell :tangle (meq/tangle-path)
+make tangle update add
+nix flake info &> /dev/null && use flake --show-trace || use nix --show-trace
+#+end_src
+
 * shell.nix
 
 #+begin_src nix :tangle (meq/tangle-path)
-with builtins; (import ./.).devShell.${builtins.currentSystem}
+(import ./.).devShell.${builtins.currentSystem}
 #+end_src
 
 * default.nix
@@ -22,7 +29,10 @@ in {
 
 #+begin_src nix :tangle (meq/tangle-path)
 {
-    description = "The official hy conftest, as a pytest plugin!";
+
+    # TODO: Change this!
+    description = "";
+
     inputs = rec {
         settings.url = github:sylvorg/settings;
         flake-utils.url = github:numtide/flake-utils;
@@ -33,24 +43,15 @@ in {
     };
     outputs = inputs@{ self, flake-utils, settings, ... }: with builtins; with settings.lib; with flake-utils.lib; settings.mkOutputs {
         inherit inputs;
-        pname = "pytest-hy";
-        callPackage = { stdenv
-            , buildPythonPackage
-            , pythonOlder
-            , pname
-        }: j.mkPythonPackage self.pkgs.${stdenv.targetPlatform.system}.Pythons.${self.type}.pkgs (rec {
-            owner = "syvlorg";
-            version = "0.0.1";
-            inherit pname;
-            disabled = pythonOlder "3.7";
-            src = ./.;
-            postPatch = ''substituteInPlace setup.py --replace "install_requires=[\"pytest\", \"hy\"]," ""'';
-            meta = {
-                description = "The official hy conftest, as a pytest plugin!";
-                license = licenses.mit;
-            };
-        });
         type = "hy";
+
+        # TODO: Change this!
+        pname = "";
+        
+        isApp = true;
+
+        # TODO: Change this!
+        callPackage = {}: {};
     };
 }
 #+end_src

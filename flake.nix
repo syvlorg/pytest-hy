@@ -15,7 +15,7 @@
             , buildPythonPackage
             , pythonOlder
             , pname
-        }: buildPythonPackage (j.mkPythonPackage self.pkgs.${stdenv.targetPlatform.system}.Pythons.${self.type}.pkgs (rec {
+        }: j.mkPythonPackage self.pkgs.${stdenv.targetPlatform.system}.Pythons.${self.type}.pkgs (rec {
             owner = "syvlorg";
             version = "0.0.1";
             inherit pname;
@@ -26,7 +26,7 @@
                 description = "The official hy conftest, as a pytest plugin!";
                 license = licenses.mit;
             };
-        }));
+        });
         type = "hy";
     };
 }
