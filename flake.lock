@@ -594,11 +594,11 @@
         "sysget": "sysget"
       },
       "locked": {
-        "lastModified": 1661633255,
-        "narHash": "sha256-DVpt6djIrCLpAVxrZeYF1Mdce+I1bg1VFmlt4110DhY=",
+        "lastModified": 1661633703,
+        "narHash": "sha256-AxPh6/urJiDwOwvrr4jVpSdtS/RzuHPG8f71plriLX0=",
         "owner": "sylvorg",
         "repo": "settings",
-        "rev": "16a73cd95c50f7062f1e4f6bdde8a4d0e722d7c3",
+        "rev": "3b1300c2e3fb79bb81e66ff6293a7eff57ac50d0",
         "type": "github"
       },
       "original": {

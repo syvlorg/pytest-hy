@@ -22,6 +22,7 @@
             disabled = pythonOlder "3.7";
             src = ./.;
             postPatch = ''substituteInPlace setup.py --replace "install_requires=[\"pytest\", \"hy\"]," ""'';
+            doCheck = false;
             meta = {
                 description = "The official hy conftest, as a pytest plugin!";
                 license = licenses.mit;
