@@ -34,20 +34,22 @@ in {
     outputs = inputs@{ self, flake-utils, settings, ... }: with builtins; with settings.lib; with flake-utils.lib; settings.mkOutputs {
         inherit inputs;
         pname = "pytest-hy";
-        callPackage = { lib, buildPythonPackage, fetchFromGitHub, pythonOlder, pytest, hy, pname }: let
+        callPackage = { stdenv
+            , buildPythonPackage
+            , pythonOlder
+            , pname
+        }: buildPythonPackage (j.mkPythonPackage self.pkgs.${stdenv.targetPlatform.system}.Pythons.${self.type}.pkgs (rec {
             owner = "syvlorg";
-        in buildPythonPackage rec {
             version = "0.0.1";
             inherit pname;
             disabled = pythonOlder "3.7";
             src = ./.;
-            buildInputs = [ pytest hy ];
-            meta = with lib; {
-                homepage = "https://github.com/${owner}/${pname}";
+            postPatch = ''substituteInPlace setup.py --replace "install_requires=[\"pytest\", \"hy\"]," ""'';
+            meta = {
                 description = "The official hy conftest, as a pytest plugin!";
                 license = licenses.mit;
             };
-        };
+        }));
         type = "hy";
     };
 }
