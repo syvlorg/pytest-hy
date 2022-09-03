@@ -18,7 +18,7 @@
             , pname
         }: j.mkPythonPackage self.pkgs.${stdenv.targetPlatform.system}.Pythons.${self.type}.pkgs (rec {
             owner = "syvlorg";
-            version = "0.0.1";
+            version = "1.0.0.0";
             inherit pname;
             disabled = pythonOlder "3.7";
             src = ./.;
