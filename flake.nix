@@ -2,6 +2,7 @@
     description = "The official hy conftest, as a pytest plugin!";
     inputs = rec {
         settings.url = github:sylvorg/settings;
+        titan.url = github:syvlorg/titan;
         flake-utils.url = github:numtide/flake-utils;
         flake-compat = {
             url = "github:edolstra/flake-compat";
