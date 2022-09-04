@@ -745,11 +745,11 @@
         "uglifycss": "uglifycss"
       },
       "locked": {
-        "lastModified": 1662316956,
-        "narHash": "sha256-/KUNBFqQq9Pncx4SHfpWVjgqx9VrehjkeGII1cnWAus=",
+        "lastModified": 1662317863,
+        "narHash": "sha256-F0N9STzDl4zyCWNpzm1vFoSC/ZVd7F32bKcJWWLVKks=",
         "owner": "sylvorg",
         "repo": "settings",
-        "rev": "b6c3b0beb19eeeb5c24ef25ab443f15a421753ed",
+        "rev": "47bc34ab068a6a6abbcce6e59eaf5f037c2c4b4b",
         "type": "github"
       },
       "original": {
@@ -782,11 +782,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1662266093,
-        "narHash": "sha256-Isv6JY7IHkoz+og9OPAa30xzp7riLeOZJ9tvMXOsVjw=",
+        "lastModified": 1662317770,
+        "narHash": "sha256-+XWypkCI5Btq8RDdGH7K0D8Cbq+jHEfpsNjogbpz8cg=",
         "owner": "syvlorg",
         "repo": "titan",
-        "rev": "2276c0e7023cbf9df07b9d9a0b64e3c6f6107341",
+        "rev": "ad4be0034e189e8af0cc224270257e04e9da1dc5",
         "type": "github"
       },
       "original": {
@@ -802,11 +802,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1662266093,
-        "narHash": "sha256-Isv6JY7IHkoz+og9OPAa30xzp7riLeOZJ9tvMXOsVjw=",
+        "lastModified": 1662317770,
+        "narHash": "sha256-+XWypkCI5Btq8RDdGH7K0D8Cbq+jHEfpsNjogbpz8cg=",
         "owner": "syvlorg",
         "repo": "titan",
-        "rev": "2276c0e7023cbf9df07b9d9a0b64e3c6f6107341",
+        "rev": "ad4be0034e189e8af0cc224270257e04e9da1dc5",
         "type": "github"
       },
       "original": {
