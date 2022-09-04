@@ -1,7 +1,8 @@
 {
     description = "The official hy conftest, as a pytest plugin!";
     inputs = rec {
-        settings.url = github:sylvorg/settings;
+        # settings.url = github:sylvorg/settings;
+        settings.url = path:settings;
         titan.url = github:syvlorg/titan;
         flake-utils.url = github:numtide/flake-utils;
         flake-compat = {
@@ -16,7 +17,7 @@
             , buildPythonPackage
             , pythonOlder
             , pname
-        }: j.mkPythonPackage self.pkgs.${stdenv.targetPlatform.system}.Pythons.${self.type}.pkgs (rec {
+        }: j.mkPythonPackage self stdenv [] (rec {
             owner = "syvlorg";
             version = "1.0.0.0";
             inherit pname;

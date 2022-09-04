@@ -43,10 +43,12 @@ in {
 
 #+begin_src nix :tangle (meq/tangle-path)
 {
-    description = "The official hy conftest, as a pytest plugin!";
+
+    # TODO: Change this!
+    description = "";
+
     inputs = rec {
-        # settings.url = github:sylvorg/settings;
-        settings.url = path:settings;
+        settings.url = github:sylvorg/settings;
         titan.url = github:syvlorg/titan;
         flake-utils.url = github:numtide/flake-utils;
         flake-compat = {
@@ -56,25 +58,15 @@ in {
     };
     outputs = inputs@{ self, flake-utils, settings, ... }: with builtins; with settings.lib; with flake-utils.lib; settings.mkOutputs {
         inherit inputs;
-        pname = "pytest-hy";
-        callPackage = { stdenv
-            , buildPythonPackage
-            , pythonOlder
-            , pname
-        }: j.mkPythonPackage self stdenv [] (rec {
-            owner = "syvlorg";
-            version = "1.0.0.0";
-            inherit pname;
-            disabled = pythonOlder "3.7";
-            src = ./.;
-            postPatch = ''substituteInPlace setup.py --replace "install_requires=[\"pytest\", \"hy\"]," ""'';
-            doCheck = false;
-            meta = {
-                description = "The official hy conftest, as a pytest plugin!";
-                license = licenses.mit;
-            };
-        });
         type = "hy";
+
+        # TODO: Change this!
+        pname = "";
+        
+        isApp = true;
+
+        # TODO: Change this!
+        callPackage = {}: {};
     };
 }
 #+end_src
