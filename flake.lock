@@ -777,11 +777,11 @@
         "uglifycss": "uglifycss"
       },
       "locked": {
-        "lastModified": 1663974785,
-        "narHash": "sha256-Ra190A2SP8U4KKJ356B6VT7KhWa1S5MpTtgCg8UtM+Q=",
+        "lastModified": 1663984981,
+        "narHash": "sha256-/zpExOcqTMNw3eJOjHR4VKuQT1V8aoV0sZbT9L444+M=",
         "owner": "sylvorg",
         "repo": "settings",
-        "rev": "c756b947ccf8c32e5bb2a90b83fb528eebd0ca64",
+        "rev": "f725481abcdc0aca99bf72e6846a6f2cbca2a155",
         "type": "github"
       },
       "original": {
