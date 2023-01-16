@@ -1,5 +1,4 @@
 import os
-import sys
 from functools import reduce
 from operator import or_
 from pathlib import Path
@@ -29,4 +28,6 @@ def pytest_collect_file(parent, path):
 
         and path.basename != "__init__.hy"
     ):
-        return pytest.Module.from_parent(parent, path=Path(path))
+        path = Path(path)
+        path.touch(exist_ok = True)
+        return pytest.Module.from_parent(parent, path = path)
