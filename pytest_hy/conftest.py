@@ -15,7 +15,7 @@ os.environ.pop("HYSTARTUP", None)
 
 def pytest_collect_file(parent, path):
     if (
-        path.ext == ".hy"
+        path.ext in (".hy", ".py")
         and (
             path.basename.startswith("test_")
             or path.basename.startswith("test-")
